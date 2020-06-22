@@ -18,3 +18,39 @@ Each element of the array is intialized with an *asterik*. Game allows Player 1 
 Winner: Player wins when there are 3 (X's or O's) in a row, in a column, or diagonally across the board.
 
 Tie: Occurs when all the locations in the board are full, but there is no winner.
+
+## Game Logic
+```C++
+    bool isPlayer1 = true;
+
+    while(!didPlayerWin() && !isTie()){
+        int row, col;
+        do{
+            if(isPlayer1){
+                cout << "\nPlayer #1" << endl;
+                cout << "Select a location on \nthe board for an X." << endl;
+            }else{
+                cout << "\nPlayer #2" << endl;
+                cout << "Select a location on \nthe board for an O." << endl;
+            }
+            cout << "Enter row and column:";
+            cin >> row >> col;
+        }while(!isLegalMove(row, col));
+        if(isPlayer1){
+            makeMove(row, col, 'X');
+            isPlayer1 = false;
+        }else{
+            makeMove(row, col, 'O');
+            isPlayer1 = true;
+        }
+    }
+    
+    if(isTie()){
+        cout << endl << "Tie Game!" << endl;
+        return 0;
+    }
+    
+    if(isPlayer1) cout << endl << "Player #2 Wins!" << endl;
+    else cout << endl << "Player #1 Wins!" << endl;
+    
+```
