@@ -85,13 +85,13 @@ bool isLegalMove(int row, int col){
 
 bool checkRows(char c){
     bool didPlayerWin = false;
-    for(int row = 0; row < 3; row++){
-        int arr[3];
-        for(int i = 0; i < 3; i++){
+    for(int row = 0; row < ROWS; row++){
+        int arr[ROWS];
+        for(int i = 0; i < ROWS; i++){
             arr[i] = board[row][i];
         }
         bool isRowCorrect = true;
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < ROWS; i++){
             if(arr[i] != c){
                 isRowCorrect = false;
             }
@@ -106,13 +106,13 @@ bool checkRows(char c){
 bool checkCols(char c) {
     bool didPlayerWin = false;
     
-    for(int col = 0; col < 3; col++){
-        int arr[3];
-        for(int i = 0; i < 3; i++){
+    for(int col = 0; col < COLS; col++){
+        int arr[COLS];
+        for(int i = 0; i < COLS; i++){
             arr[i] = board[i][col];
         }
         bool isColCorrect = true;
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < COLS; i++){
             if(arr[i] != c){
                 isColCorrect = false;
             }
@@ -125,10 +125,10 @@ bool checkCols(char c) {
 }
 
 bool checkDiag(char c){
-    int arr[3];
+    int arr[COLS];
     bool didPlayerWin = false;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
+    for(int i = 0; i < ROWS; i++){
+        for(int j = 0; j < COLS; j++){
             if(i == j){
                 arr[i] = board[i][j];
             }
@@ -136,14 +136,14 @@ bool checkDiag(char c){
     }
     
     bool isRDiag = true;
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < ROWS; i++){
         if(arr[i] != c){
             isRDiag = false;
         }
     }
     
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
+    for(int i = 0; i < COLS; i++){
+        for(int j = 0; j < COLS; j++){
             if(i == (2-j)){
                 arr[i]= board[i][j];
             }
@@ -151,7 +151,7 @@ bool checkDiag(char c){
     }
     
     bool isLDiag = true;
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < ROWS; i++){
             if(arr[i] != c){
                 isLDiag = false;
             }
@@ -170,8 +170,8 @@ bool didPlayerWin(){
 
 bool isTie(){
     bool tie = true;
-    for(int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++){
+    for(int i = 0; i < ROWS; i++){
+        for(int j = 0; j < COLS; j++){
             if(board[i][j] == '*'){
                 tie = false;
             }
