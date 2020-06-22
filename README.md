@@ -22,7 +22,6 @@ Tie: Occurs when all the locations in the board are full, but there is no winner
 ## Game Logic
 ```C++
     bool isPlayer1 = true;
-
     while(!didPlayerWin() && !isTie()){
         int row, col;
         do{
@@ -44,13 +43,4 @@ Tie: Occurs when all the locations in the board are full, but there is no winner
             isPlayer1 = true;
         }
     }
-    
-    if(isTie()){
-        cout << endl << "Tie Game!" << endl;
-        return 0;
-    }
-    
-    if(isPlayer1) cout << endl << "Player #2 Wins!" << endl;
-    else cout << endl << "Player #1 Wins!" << endl;
-    
 ```
