@@ -19,31 +19,6 @@ Winner: Player wins when there are 3 (X's or O's) in a row, in a column, or diag
 
 Tie: Occurs when all the locations in the board are full, but there is no winner.
 
-## Game Logic
-```C++
-    bool isPlayer1 = true;
-    while(!didPlayerWin() && !isTie()){
-        int row, col;
-        do{
-            if(isPlayer1){
-                cout << "\nPlayer #1" << endl;
-                cout << "Select a location on \nthe board for an X." << endl;
-            }else{
-                cout << "\nPlayer #2" << endl;
-                cout << "Select a location on \nthe board for an O." << endl;
-            }
-            cout << "Enter row and column:";
-            cin >> row >> col;
-        }while(!isLegalMove(row, col));
-        if(isPlayer1){
-            makeMove(row, col, 'X');
-            isPlayer1 = false;
-        }else{
-            makeMove(row, col, 'O');
-            isPlayer1 = true;
-        }
-    }
-```
 ## Usage
 You can play this free TicTacToe Game. Feel free to clone or download the repository and open via XCode or an C++ IDE.
 
