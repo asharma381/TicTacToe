@@ -1,1 +1,8 @@
 # Tic Tac Toe
+Tic Tac Toe Game, coded entirely in C++, uses the console output to print the game board.
+
+## Development
+This uses a two-dimensional char array with three rows and columns as the game board. Player 1 and Player 2 takes turns to play the game. The program does the following:
+```C++
+display(); // Displays the contents of the 2-D board array. Uses iomanip to format the output.
+```
