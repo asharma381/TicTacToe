@@ -45,4 +45,7 @@ Tie: Occurs when all the locations in the board are full, but there is no winner
     }
 ```
 ## Usage
-You can play this free TicTacToe Game. like you would any other header library by downloading it and copying it to a directory on your include path. Elevate is written for C++11 and above. COMING SOON: Use elevate on systems that don't have it by including it in your source files.
+You can play this free TicTacToe Game. Feel free to clone or download the repository and open via XCode or an C++ IDE.
+
+## COMING SOON
+Computer AI Engine to play single-player version of Tic Tac Toe with difficulty levels.
