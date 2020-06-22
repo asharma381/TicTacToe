@@ -6,5 +6,5 @@ This uses a two-dimensional char array with three rows and columns as the game b
 ```C++
 // Function prototypes to understand the game logic.
 void display(); // Displays the contents of the 2-D board array. Uses iomanip to format the output.
-bool isLegalMove(int row, int col); // checks to make sure user enters appropriate position and the position is empty.
+bool isLegalMove(int row, int col); // checks for empty path and valid row and col index.
 ```
